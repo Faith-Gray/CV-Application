@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-function HeaderForm() {
-    const [ resumeName, resumeTitle, phoneNumber, email, location ] = useState('');
+function HeaderForm( resumeName, resumeTitle, phoneNumber, email, location ) {
+    // const [ profileInformation, setProfileInformation ] = useState('');
 
     function handleChange(e) {
         setFormInput(e.currentTarget.value)

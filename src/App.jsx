@@ -3,7 +3,7 @@ import './App.css'
 import HeaderForm from './components/HeaderForm'
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
 
   return (
     <div className="App">
@@ -23,3 +23,8 @@ export default App
 //job title, company, dates, bullet points
 
 //Education - School, Dates - be able to add and delete
+
+//things to add
+//react-split - library to split the screen easily
+//nanoid for id numbers
+//find a library that might let me print out the resume part of the screen
