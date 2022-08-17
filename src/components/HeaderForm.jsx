@@ -19,35 +19,35 @@ function HeaderForm() {
     return (
         <form>
             <input 
-                // value={resumeName} 
+                value={headerFormData.resumeName} 
                 type="text" 
                 onChange={handleChange} 
                 placeholder="Name"
                 name="resumeName"
             />
             <input 
-                // value={resumeTitle} 
+                value={headerFormData.resumeTitle} 
                 type="text" 
                 onChange={handleChange} 
                 placeholder="Title"
                 name="resumeTitle"
             />
             <input 
-                // value={phoneNumber} 
+                value={headerFormData.phoneNumber} 
                 type="text" 
                 onChange={handleChange} 
                 placeholder="Phone Number"
                 name="phoneNumber"
             />
             <input 
-                // value={email} 
+                value={headerFormData.email} 
                 type="text" 
                 onChange={handleChange} 
                 placeholder="Email"
                 name="email"
             />
             <input 
-                // value={location} 
+                value={headerFormData.location} 
                 type="text" 
                 onChange={handleChange} 
                 placeholder="Location"
