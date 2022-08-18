@@ -6,7 +6,7 @@ function HeaderForm() {
     );
 
     console.log(headerFormData);
-
+        
     function handleChange(e) {
         setHeaderFormData(prevHeaderFormData => {
             return {
@@ -55,6 +55,7 @@ function HeaderForm() {
             />
         </form>
     );
+
 };
   
 export default HeaderForm;
