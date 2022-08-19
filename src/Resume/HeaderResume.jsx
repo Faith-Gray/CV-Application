@@ -1,9 +1,11 @@
 import HeaderForm from "../Form/HeaderForm";
 
-function HeaderResume() {
-    const headerFormElements = HeaderForm.map(input => {
-        return <HeaderForm resumeName={headerFormData.resumeName} />
-    })
+const HeaderResume = ({ headerForm }) => {
+    return (
+        <div>
+            {headerForm.resumeName}
+        </div>
+    )
 }
 
 export default HeaderResume;

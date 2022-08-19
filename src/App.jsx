@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import HeaderForm from './Form/HeaderForm'
+import HeaderResume from './Resume/HeaderResume'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -8,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <HeaderForm />
-      {/* <HeaderResume /> */}
+      {/* <HeaderResume {HeaderResume.resumeName}/> */}
 
     </div>
   )
