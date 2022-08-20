@@ -1,11 +1,11 @@
-import HeaderForm from "../Form/PersonalDetailsForm";
+import PersonalDetailsForm from "../Form/PersonalDetailsForm";
 
-const HeaderResume = ({ headerForm }) => {
+const PersonalDetailsResume = ({ PersonalDetailsFormData }) => {
     return (
         <div>
-            {headerForm.resumeName}
+            {PersonalDetailsFormData.resumeName}
         </div>
     )
 }
 
-export default HeaderResume;
+export default PersonalDetailsResume;

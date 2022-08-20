@@ -1,11 +1,9 @@
 import { useState } from 'react'
 import './App.css'
 import PersonalDetailsForm from './Form/PersonalDetailsForm'
-import HeaderResume from './Resume/PersonalDetailsResume'
+import PersonalDetailsResume from './Resume/PersonalDetailsResume'
 
 function App() {
-  // const [count, setCount] = useState(0)
-
     const [ PersonalDetailsFormData, setPersonalDetailsFormData ] = useState(
         {resumeName: "", resumeTitle: "", phoneNumber: "", email: "", location: ""}
     );
@@ -24,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <PersonalDetailsForm PersonalDetailsFormData={PersonalDetailsFormData} handleChange={handleChange}/>
-      {/* <HeaderResume {HeaderResume.resumeName}/> */}
+      <PersonalDetailsResume PersonalDetailsFormData={PersonalDetailsFormData} handleChange={handleChange}/>
 
     </div>
   )
