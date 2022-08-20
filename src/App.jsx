@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import './App.css'
-import HeaderForm from './Form/HeaderForm'
-import HeaderResume from './Resume/HeaderResume'
+import PersonalDetailsForm from './Form/PersonalDetailsForm'
+import HeaderResume from './Resume/PersonalDetailsResume'
 
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      <HeaderForm />
+      <PersonalDetailsForm />
       {/* <HeaderResume {HeaderResume.resumeName}/> */}
 
     </div>

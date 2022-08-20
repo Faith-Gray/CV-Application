@@ -1,4 +1,4 @@
-import HeaderForm from "../Form/HeaderForm";
+import HeaderForm from "../Form/PersonalDetailsForm";
 
 const HeaderResume = ({ headerForm }) => {
     return (

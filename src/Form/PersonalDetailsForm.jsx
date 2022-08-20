@@ -1,16 +1,16 @@
 import { useState } from "react";
 
-function HeaderForm() {
-    const [ headerFormData, setHeaderFormData ] = useState(
+function PersonalDetailsForm() {
+    const [ PersonalDetailsFormData, setPersonalDetailsFormData ] = useState(
         {resumeName: "", resumeTitle: "", phoneNumber: "", email: "", location: ""}
     );
 
-    console.log(headerFormData);
+    console.log(PersonalDetailsFormData);
         
     function handleChange(e) {
-        setHeaderFormData(prevHeaderFormData => {
+        setPersonalDetailsFormData(prevPersonalDetailsFormData => {
             return {
-                ...prevHeaderFormData,
+                ...prevPersonalDetailsFormData,
                 [e.target.name]: e.target.value
             }
         })
@@ -19,35 +19,35 @@ function HeaderForm() {
     return (
         <form>
             <input 
-                value={headerFormData.resumeName} 
+                value={PersonalDetailsFormData.resumeName} 
                 type="text" 
                 onChange={handleChange} 
                 placeholder="Name"
                 name="resumeName"
             />
             <input 
-                value={headerFormData.resumeTitle} 
+                value={PersonalDetailsFormData.resumeTitle} 
                 type="text" 
                 onChange={handleChange} 
                 placeholder="Title"
                 name="resumeTitle"
             />
             <input 
-                value={headerFormData.phoneNumber} 
+                value={PersonalDetailsFormData.phoneNumber} 
                 type="text" 
                 onChange={handleChange} 
                 placeholder="Phone Number"
                 name="phoneNumber"
             />
             <input 
-                value={headerFormData.email} 
+                value={PersonalDetailsFormData.email} 
                 type="text" 
                 onChange={handleChange} 
                 placeholder="Email"
                 name="email"
             />
             <input 
-                value={headerFormData.location} 
+                value={PersonalDetailsFormData.location} 
                 type="text" 
                 onChange={handleChange} 
                 placeholder="Location"
@@ -58,4 +58,4 @@ function HeaderForm() {
 
 };
   
-export default HeaderForm;
+export default PersonalDetailsForm;
