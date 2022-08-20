@@ -1,20 +1,20 @@
 import { useState } from "react";
 
 function PersonalDetailsForm() {
-    const [ PersonalDetailsFormData, setPersonalDetailsFormData ] = useState(
-        {resumeName: "", resumeTitle: "", phoneNumber: "", email: "", location: ""}
-    );
+    // const [ PersonalDetailsFormData, setPersonalDetailsFormData ] = useState(
+    //     {resumeName: "", resumeTitle: "", phoneNumber: "", email: "", location: ""}
+    // );
 
-    console.log(PersonalDetailsFormData);
+    // console.log(PersonalDetailsFormData);
         
-    function handleChange(e) {
-        setPersonalDetailsFormData(prevPersonalDetailsFormData => {
-            return {
-                ...prevPersonalDetailsFormData,
-                [e.target.name]: e.target.value
-            }
-        })
-    };
+    // function handleChange(e) {
+    //     setPersonalDetailsFormData(prevPersonalDetailsFormData => {
+    //         return {
+    //             ...prevPersonalDetailsFormData,
+    //             [e.target.name]: e.target.value
+    //         }
+    //     })
+    // };
 
     return (
         <form>

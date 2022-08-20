@@ -6,6 +6,21 @@ import HeaderResume from './Resume/PersonalDetailsResume'
 function App() {
   // const [count, setCount] = useState(0)
 
+    const [ PersonalDetailsFormData, setPersonalDetailsFormData ] = useState(
+        {resumeName: "", resumeTitle: "", phoneNumber: "", email: "", location: ""}
+    );
+
+    console.log(PersonalDetailsFormData);
+        
+    function handleChange(e) {
+        setPersonalDetailsFormData(prevPersonalDetailsFormData => {
+            return {
+                ...prevPersonalDetailsFormData,
+                [e.target.name]: e.target.value
+            }
+        })
+    };
+
   return (
     <div className="App">
       <PersonalDetailsForm />
