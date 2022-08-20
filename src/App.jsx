@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className="App">
-      <PersonalDetailsForm />
+      <PersonalDetailsForm PersonalDetailsFormData={PersonalDetailsFormData} handleChange={handleChange}/>
       {/* <HeaderResume {HeaderResume.resumeName}/> */}
 
     </div>

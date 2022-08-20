@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function PersonalDetailsForm() {
+function PersonalDetailsForm( { PersonalDetailsFormData, handleChange } ) {
     // const [ PersonalDetailsFormData, setPersonalDetailsFormData ] = useState(
     //     {resumeName: "", resumeTitle: "", phoneNumber: "", email: "", location: ""}
     // );
