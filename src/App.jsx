@@ -3,6 +3,7 @@ import './App.css'
 import PersonalDetailsForm from './Form/PersonalDetailsForm'
 import PersonalDetailsResume from './Resume/PersonalDetailsResume'
 import Header from './Header'
+import FormParent from './Form/FormParent'
 
 function App() {
     const [ PersonalDetailsFormData, setPersonalDetailsFormData ] = useState(
@@ -23,7 +24,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <PersonalDetailsForm PersonalDetailsFormData={PersonalDetailsFormData} handleChange={handleChange}/>
+      <FormParent PersonalDetailsFormData={PersonalDetailsFormData} handleChange={handleChange}/>
       <PersonalDetailsResume PersonalDetailsFormData={PersonalDetailsFormData} handleChange={handleChange}/>
 
     </div>
