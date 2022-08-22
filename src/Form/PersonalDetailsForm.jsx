@@ -18,7 +18,7 @@ function PersonalDetailsForm( { PersonalDetailsFormData, handleChange } ) {
 
     return (
         <>
-            <div>Personal Details</div>
+            <div className="formHeaders">Personal Details</div>
             <form>
                 <input 
                     value={PersonalDetailsFormData.resumeName} 
