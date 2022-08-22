@@ -69,4 +69,31 @@ input[type=text] {
 
 .personalDetailsSection {
     border-bottom: 3px solid #aaa;
+    display: grid;
+    grid-template-columns: 150px 50px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "name phone"
+      "title email"
+      "..... location";
+}
+
+.personalDetailsName{
+    grid-area: "name";
+}
+
+.personalDetailsTitle{
+    grid-area: "title";
+}
+
+.phone{
+    grid-area: "phone";
+}
+
+.email{
+    grid-area: "email";
+}
+
+.city{
+    grid-area: "city";
 }
