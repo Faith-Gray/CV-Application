@@ -31,7 +31,8 @@ function App() {
         <div className='resume'>
           <PersonalDetailsResume PersonalDetailsFormData={PersonalDetailsFormData} handleChange={handleChange}/>
           <div className='personalDetailsSection'> 
-            <div className='personalDetailsName'>John Doeman</div>
+            <div className='personalDetailsName'>JOHN DOEMAN</div>
+            <div className='personalDetailsTitle'>Software Developer</div>
             <div className='phone'>555-555-5555</div>
             <div className='email'>fhgray96@gmail.com</div>
             <div className='city'>Austin, TX</div>

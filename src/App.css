@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
 
 * {
     box-sizing: border-box;
@@ -36,6 +37,8 @@ html {
     height: 800px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    padding: 40px;
+
 }
 
 .container {
@@ -53,4 +56,17 @@ input[type=text] {
     padding: 7px 10px;
     margin: 2px 0;
     box-sizing: border-box;
+}
+
+.personalDetailsName {
+    font-size: 2.3rem;
+    font-weight: bold;
+}
+
+.resume {
+    font-family: 'Montserrat', 'Times New Roman';
+}
+
+.personalDetailsSection {
+    border-bottom: 3px solid #aaa;
 }
