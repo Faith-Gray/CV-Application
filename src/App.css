@@ -61,6 +61,8 @@ input[type=text] {
 .personalDetailsName {
     font-size: 2.3rem;
     font-weight: bold;
+    grid-area: "name";
+
 }
 
 .resume {
@@ -70,30 +72,61 @@ input[type=text] {
 .personalDetailsSection {
     border-bottom: 3px solid #aaa;
     display: grid;
-    grid-template-columns: 150px 50px;
-    grid-template-rows: auto;
+    /* grid-template-columns: 80%, auto;
+    grid-template-rows: auto; */
     grid-template-areas: 
       "name phone"
       "title email"
-      "..... location";
+      ".... city";
 }
 
-.personalDetailsName{
-    grid-area: "name";
-}
-
-.personalDetailsTitle{
-    grid-area: "title";
+.personalDetailsTitle {
+    grid-area: title;
+    font-size: 18px;
 }
 
 .phone{
-    grid-area: "phone";
+    grid-area: phone;
+    font-size: 13px;
+    text-align: end;
 }
 
 .email{
-    grid-area: "email";
+    grid-area: email;
+    font-size: 13px;
+    text-align: end;
+
 }
 
 .city{
-    grid-area: "city";
+    grid-area: city;
+    font-size: 13px;
+    text-align: end;
+
+}
+
+.resumeTitle {
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.workTitle {
+    display: inline;
+    font-size: 13px;
+
+}
+
+.workDates {
+    display: inline;
+    text-align: end;
+    font-size: 13px;
+
+}
+
+.workTask {
+    padding-top: 5px;
+    font-size: 14px;
+
 }

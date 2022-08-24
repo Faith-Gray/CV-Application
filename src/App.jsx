@@ -32,20 +32,19 @@ function App() {
           <PersonalDetailsResume PersonalDetailsFormData={PersonalDetailsFormData} handleChange={handleChange}/>
           <div className='personalDetailsSection'> 
             <div className='personalDetailsName'>JOHN DOEMAN</div>
-            <div className='personalDetailsTitle'>Software Developer</div>
             <div className='phone'>555-555-5555</div>
             <div className='email'>fhgray96@gmail.com</div>
             <div className='city'>Austin, TX</div>
+            <div className='personalDetailsTitle'>Software Developer</div>
           </div>
           <div className='workExperienceSection'>
-            <div className='resumeTitle'>Work Experience</div>
-            <div className='workTitle'>Software Egineer</div>
-            <div className='workPlace'>Google</div>
-            <div className='workdates'>September 2018 - October 2020</div>
+            <div className='resumeTitle'>WORK EXPERIENCE</div>
+            <div className='workTitle'>Software Egineer,  Google</div>
+            <div className='workDates'>September 2018 - October 2020</div>
             <div className='workTask'>Prepared software engineering tasks with software engineering things.</div>
           </div>
           <div className='educationSection'>
-            <div className='resumeTitle'>Education</div>
+            <div className='resumeTitle'>EDUCATION</div>
             <div className='educationSchool'>Wichita State University</div>
             <div className='major'>Software Engineering</div>
             <div className='GPA'>3.5/4.0</div>
