@@ -46,9 +46,9 @@ function App() {
           <div className='educationSection'>
             <div className='resumeTitle'>EDUCATION</div>
             <div className='educationSchool'>Wichita State University</div>
-            <div className='major'>Software Engineering</div>
+            <div className='educationDate'>December</div>
+            <div className='major'>Major: Software Engineering</div>
             <div className='GPA'>3.5/4.0</div>
-            <div className='Date'>December</div>
           </div>
         </div>
       </div>

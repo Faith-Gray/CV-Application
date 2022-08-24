@@ -130,3 +130,23 @@ input[type=text] {
     font-size: 14px;
 
 }
+
+.educationSchool {
+    font-size: 14px;
+    display: inline;
+}
+
+.educationDate {
+    font-size: 14px;
+    display: inline;
+
+}
+
+.major {
+    font-size: 14px;
+
+}
+
+.GPA {
+    font-size: 14px;
+}
