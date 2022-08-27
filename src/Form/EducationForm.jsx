@@ -1,42 +1,35 @@
-function EducationForm( { PersonalDetailsFormData, handleChange } ) {
+function EducationForm( { EducationFormData, handleChangeEducationEducation } ) {
 
 
     return (
         <form>
             <input 
-                value={PersonalDetailsFormData.resumeName} 
+                value={EducationFormData.schoolName} 
                 type="text" 
-                onChange={handleChange} 
-                placeholder="Name"
-                name="resumeName"
+                onChange={handleChangeEducation} 
+                placeholder="School"
+                name="schoolName"
             />
             <input 
-                value={PersonalDetailsFormData.resumeTitle} 
+                value={EducationFormData.schoolDate} 
                 type="text" 
-                onChange={handleChange} 
-                placeholder="Title"
-                name="resumeTitle"
+                onChange={handleChangeEducation} 
+                placeholder="Date"
+                name="schoolDate"
             />
             <input 
-                value={PersonalDetailsFormData.phoneNumber} 
+                value={EducationFormData.major} 
                 type="text" 
-                onChange={handleChange} 
-                placeholder="Phone Number"
-                name="phoneNumber"
+                onChange={handleChangeEducation} 
+                placeholder="Major"
+                name="major"
             />
             <input 
-                value={PersonalDetailsFormData.email} 
+                value={EducationFormData.gpa} 
                 type="text" 
-                onChange={handleChange} 
-                placeholder="Email"
-                name="email"
-            />
-            <input 
-                value={PersonalDetailsFormData.location} 
-                type="text" 
-                onChange={handleChange} 
-                placeholder="Location"
-                name="location"
+                onChange={handleChangeEducation} 
+                placeholder="GPA"
+                name="gpa"
             />
         </form>
     );
