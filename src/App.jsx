@@ -4,6 +4,7 @@ import PersonalDetailsForm from './Form/PersonalDetailsForm'
 import PersonalDetailsResume from './Resume/PersonalDetailsResume'
 import Header from './Header'
 import WorkExperienceForm from './Form/WorkExperienceForm'
+import EducationForm from './Form/EducationForm'
 
 function App() {
     const [ PersonalDetailsFormData, setPersonalDetailsFormData ] = useState(
@@ -38,8 +39,8 @@ function App() {
       {schoolName: "", schoolDate: "", major: "", gpa: ""}
     );
 
-    function handleChangeExperience(e) {
-      setWorkExperienceFormData(prevEducationFormData => {
+    function handleChangeEducation(e) {
+      setEducationFormData(prevEducationFormData => {
           return {
               ...prevEducationFormData,
               [e.target.name]: e.target.value
@@ -54,6 +55,7 @@ function App() {
         <div className='form'>
           <PersonalDetailsForm PersonalDetailsFormData={PersonalDetailsFormData} handleChange={handleChange}/>
           <WorkExperienceForm WorkExperienceFormData={WorkExperienceFormData} handleChangeExperience={handleChangeExperience}/>
+          <EducationForm EducationFormData={EducationFormData} handleChangeEducation={handleChangeEducation}/>
 
         </div>
         <div className='resume'>
