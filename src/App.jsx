@@ -23,7 +23,7 @@ function App() {
 
     const [ WorkExperienceFormData, setWorkExperienceFormData ] = useState(
       {jobTitle: "", company: "", date: "", task: ""}
-  );
+    );
 
     function handleChangeExperience(e) {
       setWorkExperienceFormData(prevWorkExperienceFormData => {

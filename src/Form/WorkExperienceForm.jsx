@@ -8,29 +8,29 @@ function WorkExperienceForm( { WorkExperienceFormData, handleChangeExperience } 
                     value={WorkExperienceFormData.jobTitle} 
                     type="text" 
                     onChange={handleChangeExperience} 
-                    placeholder="Name"
-                    name="resumeName"
+                    placeholder="Job"
+                    name="jobTitle"
                 />
                 <input 
                     value={WorkExperienceFormData.company} 
                     type="text" 
                     onChange={handleChangeExperience} 
-                    placeholder="Title"
-                    name="resumeTitle"
+                    placeholder="Company"
+                    name="company"
                 />
                 <input 
                     value={WorkExperienceFormData.date} 
                     type="text" 
                     onChange={handleChangeExperience} 
-                    placeholder="Phone Number"
-                    name="phoneNumber"
+                    placeholder="Date(s)"
+                    name="date"
                 />
                 <input 
                     value={WorkExperienceFormData.task} 
                     type="text" 
                     onChange={handleChangeExperience} 
-                    placeholder="Email"
-                    name="email"
+                    placeholder="Task"
+                    name="task"
                 />
 
             </form>
