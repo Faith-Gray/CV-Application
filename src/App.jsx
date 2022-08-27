@@ -32,7 +32,20 @@ function App() {
               [e.target.name]: e.target.value
           }
       })
-  };
+    };
+
+    const [ EducationFormData, setEducationFormData ] = useState(
+      {schoolName: "", schoolDate: "", major: "", gpa: ""}
+    );
+
+    function handleChangeExperience(e) {
+      setWorkExperienceFormData(prevEducationFormData => {
+          return {
+              ...prevEducationFormData,
+              [e.target.name]: e.target.value
+          }
+      })
+    };
 
   return (
     <div className="App">

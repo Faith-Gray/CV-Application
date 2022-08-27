@@ -1,4 +1,4 @@
-function EducationForm( { EducationFormData, handleChangeEducationEducation } ) {
+function EducationForm( { EducationFormData, handleChangeEducation } ) {
 
 
     return (
