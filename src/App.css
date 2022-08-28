@@ -75,9 +75,9 @@ input[type=text] {
     /* grid-template-columns: 80%, auto;
     grid-template-rows: auto; */
     grid-template-areas: 
-      "name phone"
-      "title email"
-      ".... city";
+      "name gridContainer"
+      "title gridContainer"
+      ".... gridContainer";
 }
 
 .personalDetailsTitle {
@@ -85,21 +85,22 @@ input[type=text] {
     font-size: 18px;
 }
 
+.personalDetailsGridContainer {
+    grid-area: gridContainer;
+}
+
 .phone{
-    grid-area: phone;
     font-size: 13px;
     text-align: end;
 }
 
 .email{
-    grid-area: email;
     font-size: 13px;
     text-align: end;
 
 }
 
 .city{
-    grid-area: city;
     font-size: 13px;
     text-align: end;
 

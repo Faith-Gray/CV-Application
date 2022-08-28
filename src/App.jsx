@@ -61,15 +61,17 @@ function App() {
         <div className='resume'>
           <div className='personalDetailsSection'> 
             <div className='personalDetailsName'>{PersonalDetailsFormData.resumeName}</div>
-            <div className='phone'>{PersonalDetailsFormData.phoneNumber}</div>
-            <div className='email'>{PersonalDetailsFormData.email}</div>
-            <div className='city'>{PersonalDetailsFormData.location}</div>
+            <div className='personalDetailsGridContainer'>
+              <div className='phone'>{PersonalDetailsFormData.phoneNumber}</div>
+              <div className='email'>{PersonalDetailsFormData.email}</div>
+              <div className='city'>{PersonalDetailsFormData.location}</div>
+            </div>
             <div className='personalDetailsTitle'>{PersonalDetailsFormData.resumeTitle}</div>
 
           </div>
           <div className='workExperienceSection'>
             <div className='resumeTitle'>WORK EXPERIENCE</div>
-            <div className='workTitle'>{WorkExperienceFormData.jobTitle}</div>
+            <div className='workTitle'>Software Engineer, Google</div>
             <div className='workDates'>September 2018 - October 2020</div>
             <div className='workTask'>Prepared software engineering tasks with software engineering things.</div>
           </div>
