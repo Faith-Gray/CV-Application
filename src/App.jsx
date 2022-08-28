@@ -71,16 +71,20 @@ function App() {
           </div>
           <div className='workExperienceSection'>
             <div className='resumeTitle'>WORK EXPERIENCE</div>
-            <div className='workTitle'>Software Engineer, Google</div>
-            <div className='workDates'>September 2018 - October 2020</div>
-            <div className='workTask'>Prepared software engineering tasks with software engineering things.</div>
+            <div className='jobGridContainer'>
+              <div className='workTitle'>Software Engineer, Google</div>
+              <div className='workDates'>September 2018 - October 2020</div>
+              <div className='workTask'>Prepared software engineering tasks with software engineering things.</div>
+            </div>
           </div>
           <div className='educationSection'>
             <div className='resumeTitle'>EDUCATION</div>
+            <div className='educationGridContainer'>
             <div className='educationSchool'>Wichita State University</div>
-            <div className='educationDate'>December</div>
+            <div className='educationDate'>December 2017</div>
             <div className='major'>Major: Software Engineering</div>
             <div className='GPA'>3.5/4.0</div>
+            </div>
           </div>
         </div>
       </div>

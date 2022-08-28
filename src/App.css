@@ -83,10 +83,12 @@ input[type=text] {
 .personalDetailsTitle {
     grid-area: title;
     font-size: 18px;
+    padding-bottom: 5px;
 }
 
 .personalDetailsGridContainer {
     grid-area: gridContainer;
+    padding-top: 5px;
 }
 
 .phone{
@@ -150,4 +152,55 @@ input[type=text] {
 
 .GPA {
     font-size: 14px;
+}
+
+
+.jobGridContainer {
+    display: grid;
+    grid-template-areas: 
+    "jobTitle jobDate"
+    "task task";
+}
+
+.workTitle {
+    grid-area: jobTitle;
+
+}
+
+.workDates {
+    grid-area: jobDate;
+
+}
+
+.workTask {
+    grid-area: task;
+
+}
+
+.educationGridContainer {
+    display: grid;
+    grid-template-areas: 
+    "school schoolDate"
+    "major GPA";
+}
+
+.educationSchool {
+    grid-area: school;
+    padding-bottom: 1px;
+}
+
+.educationDate {
+    grid-area: schoolDate;
+    text-align: end;
+}
+
+.major {
+    grid-area: major;
+
+}
+
+.GPA {
+    grid-area: GPA;
+    text-align: end;
+
 }
