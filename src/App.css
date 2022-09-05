@@ -174,7 +174,13 @@ input[type=text] {
 
 .workTask {
     grid-area: task;
+    font-size: 14px;
+    list-style-type: circle;
+    width: 100%;
+}
 
+.workTasksList {
+    
 }
 
 .educationGridContainer {
