@@ -209,3 +209,26 @@ input[type=text] {
     text-align: end;
 
 }
+
+.formButtonContainer {
+    display: flex;
+}
+
+.addJobButton {
+    font-weight: 500;
+    margin-left: auto;
+    border: 1px outset black;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    vertical-align: middle;
+    background: radial-gradient(circle, rgba(238,174,202,0.18538753391981788) 0%, rgba(58,148,255,0.09575167957808128) 93%);
+}
+
+.addJobButton:hover {
+    background: radial-gradient(circle, rgba(238,174,202,0.18538753391981788) 0%, rgba(58,148,255,0.09575167957808128) 23%);
+}
+
+.addJobButton:active {
+    transform: scale(0.98);
+}

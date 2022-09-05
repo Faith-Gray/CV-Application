@@ -2,7 +2,10 @@ function WorkExperienceForm( { WorkExperienceFormData, handleChangeExperience } 
 
     return (
         <>
-            <div className="formHeaders">Work Experience</div>
+            <div className="formButtonContainer">
+                <div className="formHeaders">Work Experience</div>
+                <button className="addJobButton">+</button>
+            </div>
             <form>
                 <input 
                     value={WorkExperienceFormData.jobTitle} 
