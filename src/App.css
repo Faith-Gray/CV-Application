@@ -4,6 +4,7 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
 }
  
 
@@ -115,22 +116,10 @@ input[type=text] {
     padding-bottom: 10px;
 }
 
-.workTitle {
-    display: inline;
-    font-size: 13px;
-
-}
-
 .workDates {
     display: inline;
     text-align: end;
     font-size: 13px;
-
-}
-
-.workTask {
-    padding-top: 5px;
-    font-size: 14px;
 
 }
 
@@ -164,6 +153,8 @@ input[type=text] {
 
 .workTitle {
     grid-area: jobTitle;
+    display: inline;
+    font-size: 13px;
 
 }
 
@@ -173,14 +164,22 @@ input[type=text] {
 }
 
 .workTask {
-    grid-area: task;
+    /* grid-area: task; */
     font-size: 14px;
-    list-style-type: circle;
+    list-style-type: none;
     width: 100%;
+    padding-top: 2px;
+    
 }
 
 .workTasksList {
-    
+    grid-area: task;
+    font-size: 14px;
+    list-style-type: none;
+    width: 100%;
+    /* list-style-position: inside; */
+    padding-left: 1px;
+    padding-top: 3px;
 }
 
 .educationGridContainer {
