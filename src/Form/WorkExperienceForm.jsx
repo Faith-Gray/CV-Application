@@ -35,7 +35,12 @@ function WorkExperienceForm( { WorkExperienceFormData, handleChangeExperience } 
                     placeholder="Task"
                     name="task"
                 />
-
+                <input 
+                    value={WorkExperienceFormData.addTaskButton} 
+                    type="button" 
+                    onChange={handleChangeExperience} 
+                    name="addTaskButton"
+                />                
             </form>
         </>
     );
