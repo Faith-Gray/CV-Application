@@ -36,10 +36,12 @@ function WorkExperienceForm( { WorkExperienceFormData, handleChangeExperience } 
                     name="task"
                 />
                 <input 
-                    value={WorkExperienceFormData.addTaskButton} 
+                    className="addTaskButton"
+                    value="Add Task" 
                     type="button" 
                     onChange={handleChangeExperience} 
                     name="addTaskButton"
+                    
                 />                
             </form>
         </>

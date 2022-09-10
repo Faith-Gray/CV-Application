@@ -227,3 +227,17 @@ input[type=text] {
 .addJobButton:active {
     transform: scale(0.96);
 }
+
+.addTaskButton {
+    font-weight: 500;
+    margin-left: auto;
+    border: 1px outset black;
+    height: 30px;
+    cursor: pointer;
+    vertical-align: middle;
+    
+}
+
+.addTaskButton:active {
+    transform: scale(0.96);
+}
