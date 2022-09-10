@@ -9,5 +9,7 @@ const TaskArray = ({taskArray, handleTask}) => {
                 )
             })}
         </div>
-    )
+    );
 };
+
+export default TaskArray;
