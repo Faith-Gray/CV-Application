@@ -1,10 +1,10 @@
-import { useState } from 'react'
-import './App.css'
-import PersonalDetailsForm from './Form/PersonalDetailsForm'
-import PersonalDetailsResume from './Resume/PersonalDetailsResume'
-import Header from './Header'
-import WorkExperienceForm from './Form/WorkExperienceForm'
-import EducationForm from './Form/EducationForm'
+import { useState } from 'react';
+import './App.css';
+import PersonalDetailsForm from './Form/PersonalDetailsForm';
+import PersonalDetailsResume from './Resume/PersonalDetailsResume';
+import Header from './Header';
+import WorkExperienceForm from './Form/WorkExperienceForm';
+import EducationForm from './Form/EducationForm';
 
 function App() {
     const [ PersonalDetailsFormData, setPersonalDetailsFormData ] = useState(
@@ -22,18 +22,37 @@ function App() {
         })
     };
 
+    // I think I need to make the form's use state an array to loop through
+
     const [ WorkExperienceFormData, setWorkExperienceFormData ] = useState(
-      {jobTitle: "", date: "", task: ""}
+      [{jobTitle: "", date: "", task: ""}]
     );
 
-    function handleChangeExperience(e) {
-      setWorkExperienceFormData(prevWorkExperienceFormData => {
-          return {
-              ...prevWorkExperienceFormData,
-              [e.target.name]: e.target.value
-          }
-      })
+    // function handleChangeExperience(e) {
+    //   setWorkExperienceFormData(prevWorkExperienceFormData => {
+    //       return {
+    //           ...prevWorkExperienceFormData,
+    //           [e.target.name]: e.target.value
+    //       }
+    //   })
+    // };
+
+    const handleChangeExperience = (e, i) => {
+      const { name, value } = e.target;
+      const list = [...WorkExperienceFormData];
+      list[0][name] = value;
+      setWorkExperienceFormData(list);
+
+      console.log(list);
+      console.log(i);
+      console.log(name);
+      console.log(value);
+
     };
+
+  
+
+
 
     const [ EducationFormData, setEducationFormData ] = useState(
       {schoolName: "", schoolDate: "", major: "", gpa: ""}
