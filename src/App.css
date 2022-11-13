@@ -216,7 +216,7 @@ input[type=text] {
 
 .addJobButton {
     font-weight: 500;
-    margin-left: auto;
+    margin-left: 50px;
     border: 1px outset black;
     height: 30px;
     width: 30px;
@@ -225,6 +225,20 @@ input[type=text] {
 }
 
 .addJobButton:active {
+    transform: scale(0.96);
+}
+
+.subJobButton {
+    font-weight: 500;
+    margin-left: auto;
+    border: 1px outset black;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.subJobButton:active {
     transform: scale(0.96);
 }
 

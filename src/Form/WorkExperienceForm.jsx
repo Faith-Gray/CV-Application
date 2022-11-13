@@ -1,6 +1,6 @@
 
 
-function WorkExperienceForm( { WorkExperienceFormData, handleChangeExperience } ) {
+function WorkExperienceForm( { WorkExperienceFormData, handleChangeExperience, handleAddClick } ) {
 
     // const [counter, setCounter] = useState(0);
     // const [inputValues, setInputValues] = useState({});
@@ -27,13 +27,13 @@ function WorkExperienceForm( { WorkExperienceFormData, handleChangeExperience } 
             {WorkExperienceFormData.map((x, i) => {
 
                 return (
-
+                    
                     <form>
                         <div className="formButtonContainer">
                             <div className="formHeaders">Work Experience</div>
                             {/* <button className="addJobButton">+</button> */}
-                            {WorkExperienceFormData.length !== 1 && <button className="addJobButton">-</button>}
-                            {WorkExperienceFormData.length - 1 === i && <button className="addJobButton">+</button>}
+                            {WorkExperienceFormData.length !== 1 && <button className="subJobButton">-</button>}
+                            {WorkExperienceFormData.length - 1 === i && <button className="addJobButton" onClick={handleAddClick}>+</button>}
                         </div>                        
                         <input 
                             value={x.jobTitle} 
