@@ -90,7 +90,24 @@ function App() {
             <div className='personalDetailsTitle'>{PersonalDetailsFormData.resumeTitle || "Software Engineer"}</div>
 
           </div>
-          <div className='workExperienceSection'>
+          {WorkExperienceFormData.map(( x, i) => {
+              return (
+                  <>
+                    <div className='workExperienceSection'>
+                      <div className='resumeTitle'>WORK EXPERIENCE</div>
+                      <div className='jobGridContainer'>
+                        <div className='workTitle'>{[x][i].jobTitle|| "Software Engineer, Google"}</div>
+                        <div className='workDates'>{[x][i].date || "September 2018 - October 2020"}</div>
+                        <ul className='workTasksList'>
+                        <li className='workTask'>{[x][i].task || "Prepared software engineering tasks with software engineering things."}</li>
+                        </ul>
+                      </div>
+                    </div>                          
+                  </>
+              );
+              })}
+          
+          {/* <div className='workExperienceSection'>
             <div className='resumeTitle'>WORK EXPERIENCE</div>
             <div className='jobGridContainer'>
               <div className='workTitle'>{WorkExperienceFormData.jobTitle|| "Software Engineer, Google"}</div>
@@ -99,7 +116,7 @@ function App() {
               <li className='workTask'>{WorkExperienceFormData.task || "Prepared software engineering tasks with software engineering things."}</li>
               </ul>
             </div>
-          </div>
+          </div> */}
           <div className='educationSection'>
             <div className='resumeTitle'>EDUCATION</div>
             <div className='educationGridContainer'>
