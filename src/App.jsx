@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import './App.css';
 import PersonalDetailsForm from './Form/PersonalDetailsForm';
-import PersonalDetailsResume from './Resume/PersonalDetailsResume';
 import Header from './Header';
 import WorkExperienceForm from './Form/WorkExperienceForm';
 import EducationForm from './Form/EducationForm';
@@ -42,23 +41,28 @@ function App() {
       const list = [...WorkExperienceFormData];
       list[i][name] = value;
       setWorkExperienceFormData(list);
-
-      // console.log(list);
-      // console.log(i);
-      // console.log(name);
-      // console.log(value);
-
     };
 
-    // const handleRemoveClick = index => {
-    //   const list = [...WorkExperienceFormData];
-    //   list.splice(index, 1);
-    //   setWorkExperienceFormData(list);
-    // };
+    const handleRemoveClick = index => {
+      const list = [...WorkExperienceFormData];
+      list.splice(index, 1);
+      setWorkExperienceFormData(list);
+    };
 
     const handleAddClick = () => {
       setWorkExperienceFormData([...WorkExperienceFormData, { jobTitle: "", date: "", task: "" }]);
       // console.log(WorkExperienceFormData);
+    };
+
+    // const handleAddTask = (index) => {
+    //   let workExperienceTarget = WorkExperienceFormData[index].task
+    //   setWorkExperienceFormData([...task, {task: ""}]);
+    // };
+
+    const handleAddTask = () => {
+      const list = [...WorkExperienceFormData];
+      list.task.push({task: ""});
+      setWorkExperienceFormData(list);
     };
   
     const [ EducationFormData, setEducationFormData ] = useState(
@@ -83,7 +87,7 @@ function App() {
         <div className='form'>
           <PersonalDetailsForm PersonalDetailsFormData={PersonalDetailsFormData} handleChange={handleChange}/>
           <WorkExperienceForm WorkExperienceFormData={WorkExperienceFormData} handleChangeExperience={handleChangeExperience}
-          handleAddClick={handleAddClick}/>
+          handleAddClick={handleAddClick} handleRemoveClick={handleRemoveClick} handleAddTask={handleAddTask}/>
           <EducationForm EducationFormData={EducationFormData} handleChangeEducation={handleChangeEducation}/>
 
         </div>
@@ -99,25 +103,24 @@ function App() {
 
           </div>
 
-
-          {WorkExperienceFormData.map(( x, i) => {
-              return (
-                  <>
-                    <div className='workExperienceSection'>
-                      <div className='resumeTitle'>WORK EXPERIENCE</div>
-                      <div className='jobGridContainer'>
-                        <div className='workTitle'>{WorkExperienceFormData[i].jobTitle|| "Software Engineer, Google"}</div>
-                        <div className='workDates'>{WorkExperienceFormData[i].date || "September 2018 - October 2020"}</div>
-                        <ul className='workTasksList'>
-                        <li className='workTask'>{WorkExperienceFormData[i].task || "Prepared software engineering tasks with software engineering things."}</li>
-                        </ul>
-                      </div>
-                    </div>  
-                    {console.log(x)}                      
-                  </>
-              );
-            })}
-          
+          <div className='workExperienceSection'>
+            <div className='resumeTitle'>WORK EXPERIENCE</div>
+            {WorkExperienceFormData.map(( x, i) => {
+                return (
+                    <>
+                        <div className='jobGridContainer'>
+                          <div className='workTitle'>{WorkExperienceFormData[i].jobTitle|| "Software Engineer, Google"}</div>
+                          <div className='workDates'>{WorkExperienceFormData[i].date || "September 2018 - October 2020"}</div>
+                          <ul className='workTasksList'>
+                            {/* {WorkExperienceFormData.map(( x, i) => { */}
+                          <li className='workTask'>{WorkExperienceFormData[i].task || "Prepared software engineering tasks with software engineering things."}</li>
+                          </ul>
+                        </div>
+                      {console.log(x)}                      
+                    </>
+                );
+              })}
+          </div>
           {/* <div className='workExperienceSection'>
             <div className='resumeTitle'>WORK EXPERIENCE</div>
             <div className='jobGridContainer'>

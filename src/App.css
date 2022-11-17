@@ -166,7 +166,7 @@ input[type=text] {
 .workTask {
     /* grid-area: task; */
     font-size: 14px;
-    list-style-type: none;
+    list-style-type: circle;
     width: 100%;
     padding-top: 2px;
     
@@ -177,7 +177,7 @@ input[type=text] {
     font-size: 14px;
     list-style-type: none;
     width: 100%;
-    /* list-style-position: inside; */
+    list-style-position: inside;
     padding-left: 1px;
     padding-top: 3px;
 }

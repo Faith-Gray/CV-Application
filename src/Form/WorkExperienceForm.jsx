@@ -1,6 +1,6 @@
 
 
-function WorkExperienceForm( { WorkExperienceFormData, handleChangeExperience, handleAddClick } ) {
+function WorkExperienceForm( { WorkExperienceFormData, handleChangeExperience, handleAddClick, handleRemoveClick, handleAddTask } ) {
 
     // const [counter, setCounter] = useState(0);
     // const [inputValues, setInputValues] = useState({});
@@ -32,8 +32,8 @@ function WorkExperienceForm( { WorkExperienceFormData, handleChangeExperience, h
                         <div className="formButtonContainer">
                             <div className="formHeaders">Work Experience</div>
                             {/* <button className="addJobButton">+</button> */}
-                            {WorkExperienceFormData.length !== 1 && <button className="subJobButton">-</button>}
-                            {WorkExperienceFormData.length - 1 === i && <button className="addJobButton" onClick={handleAddClick}>+</button>}
+                            {WorkExperienceFormData.length !== 1 && <button className="subJobButton" type="button" onClick={handleRemoveClick}>-</button>}
+                            {WorkExperienceFormData.length - 1 === i && <button className="addJobButton" type="button" onClick={handleAddClick}>+</button>}
                         </div>                        
                         <input 
                             value={x.jobTitle} 
@@ -83,7 +83,7 @@ function WorkExperienceForm( { WorkExperienceFormData, handleChangeExperience, h
                             className="addTaskButton"
                             value="Add Task" 
                             type="button" 
-                            // onClick={handleAddButton}
+                            onClick={handleAddTask}
                             name="addTaskButton"
                             
                         />                
