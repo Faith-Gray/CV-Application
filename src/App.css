@@ -31,6 +31,7 @@ html {
     display: flex;
     flex-direction: column;
     padding: 20px;
+    overflow: scroll;
 }
 
 .resume {
@@ -145,6 +146,7 @@ input[type=text] {
 
 
 .jobGridContainer {
+    padding-bottom: 10px;
     display: grid;
     grid-template-areas: 
     "jobTitle jobDate"
@@ -169,7 +171,6 @@ input[type=text] {
     list-style-type: circle;
     width: 100%;
     padding-top: 2px;
-    
 }
 
 .workTasksList {
