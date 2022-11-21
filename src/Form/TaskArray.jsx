@@ -1,11 +1,11 @@
 import Task from "./Task";
 
-const TaskArray = ({taskArray, handleTask}) => {
+const TaskArray = ({taskArray, handleAddTask}) => {
     return (
         <div>
             {taskArray.map(task => {
                 return(
-                    <Task task={task} handleTask={handleTask}/>
+                    <Task task={task} handleAddTask={handleAddTask}/>
                 )
             })}
         </div>

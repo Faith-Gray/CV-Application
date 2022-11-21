@@ -4,6 +4,7 @@ import PersonalDetailsForm from './Form/PersonalDetailsForm';
 import Header from './Header';
 import WorkExperienceForm from './Form/WorkExperienceForm';
 import EducationForm from './Form/EducationForm';
+import { v1 as uuidv1 } from 'uuid';
 
 function App() {
     const [ PersonalDetailsFormData, setPersonalDetailsFormData ] = useState(
@@ -24,7 +25,7 @@ function App() {
     // I think I need to make the form's use state an array to loop through
 
     const [ WorkExperienceFormData, setWorkExperienceFormData ] = useState(
-      [{jobTitle: "", date: "", task: ""}]
+      [{jobTitle: "", date: "", task: [""], id: uuidv1()}]
     );
 
     // function handleChangeExperience(e) {
@@ -43,27 +44,44 @@ function App() {
       setWorkExperienceFormData(list);
     };
 
-    const handleRemoveClick = index => {
+    const handleRemoveClick = (index) => {
       const list = [...WorkExperienceFormData];
       list.splice(index, 1);
       setWorkExperienceFormData(list);
+      console.log(index);
     };
 
     const handleAddClick = () => {
-      setWorkExperienceFormData([...WorkExperienceFormData, { jobTitle: "", date: "", task: "" }]);
-      // console.log(WorkExperienceFormData);
+      setWorkExperienceFormData([...WorkExperienceFormData, { jobTitle: "", date: "", task: [""], id: uuidv1()}]);
     };
+
+    // setState(
+    //   state.map((item) => {
+    //       if (item.id === id) {
+    //           return { ...item, tasks: [...item.tasks, newTask] };
+    //       }
+    //       return item;
+    //   }),
+    // );
 
     // const handleAddTask = (index) => {
     //   let workExperienceTarget = WorkExperienceFormData[index].task
     //   setWorkExperienceFormData([...task, {task: ""}]);
     // };
 
-    const handleAddTask = () => {
-      const list = [...WorkExperienceFormData];
-      list.task.push({task: ""});
-      setWorkExperienceFormData(list);
+    const handleAddTask = (id) => {
+      setWorkExperienceFormData (
+        WorkExperienceFormData.map((item) => {
+          if (item.id === id) {
+              return { ...item, task: [...item.task, { task: "" }] };
+          } else {
+          return item;        
+          };
+          console.log(item.task);
+        }),
+      )
     };
+    
   
     const [ EducationFormData, setEducationFormData ] = useState(
       {schoolName: "", schoolDate: "", major: "", gpa: ""}

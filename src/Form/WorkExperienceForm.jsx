@@ -1,5 +1,4 @@
 
-
 function WorkExperienceForm( { WorkExperienceFormData, handleChangeExperience, handleAddClick, handleRemoveClick, handleAddTask } ) {
 
     // const [counter, setCounter] = useState(0);
@@ -31,7 +30,6 @@ function WorkExperienceForm( { WorkExperienceFormData, handleChangeExperience, h
                     <form>
                         <div className="formButtonContainer">
                             <div className="formHeaders">Work Experience</div>
-                            {/* <button className="addJobButton">+</button> */}
                             {WorkExperienceFormData.length !== 1 && <button className="subJobButton" type="button" onClick={handleRemoveClick}>-</button>}
                             {WorkExperienceFormData.length - 1 === i && <button className="addJobButton" type="button" onClick={handleAddClick}>+</button>}
                         </div>                        
@@ -58,13 +56,35 @@ function WorkExperienceForm( { WorkExperienceFormData, handleChangeExperience, h
                             placeholder="Date(s)"
                             name="date"
                         />
-                        <input 
-                            value={x.task} 
-                            type="text" 
-                            onChange={e => handleChangeExperience(e, i)} 
-                            placeholder="Task"
-                            name="task"
-                        />
+                        
+
+
+                        {x.task.map((x, i) => {
+                        
+                            return (
+                                <input 
+                                value={x.task} 
+                                type="text" 
+                                onChange={e => handleChangeExperience(e, i)} 
+                                placeholder="Task"
+                                name="task"
+                            />
+                            )
+                        })}
+                                                 
+                        
+                        {/* {WorkExperienceFormData.map((x, i) => {
+                            return(
+                                <input 
+                                    value={x.task} 
+                                    type="text" 
+                                    onChange={e => handleChangeExperience(e, i)} 
+                                    placeholder="Task"
+                                    name="task"
+                                />
+                                
+                            )
+                        })} */}
 
                         {/* To add later: Code to add multiple tasks */}
                         {/* {Array.from(Array(counter)).map((c, index) => {
@@ -78,6 +98,7 @@ function WorkExperienceForm( { WorkExperienceFormData, handleChangeExperience, h
                                 </input>
                             )
                         })} */}
+                        
                         
                         <input 
                             className="addTaskButton"
