@@ -73,11 +73,10 @@ function App() {
       setWorkExperienceFormData (
         WorkExperienceFormData.map((item) => {
           if (item.id === id) {
-              return { ...item, task: [...item.task, { task: "" }] };
+              return { ...item, task: [...item.task, { task: ""}] };
           } else {
           return item;        
           };
-          console.log(item.task);
         }),
       )
     };

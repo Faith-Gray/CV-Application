@@ -1,28 +1,9 @@
 
 function WorkExperienceForm( { WorkExperienceFormData, handleChangeExperience, handleAddClick, handleRemoveClick, handleAddTask } ) {
 
-    // const [counter, setCounter] = useState(0);
-    // const [inputValues, setInputValues] = useState({});
-
-    // function handleAddButton(e) {
-    //     setCounter(counter + 1);
-    //     console.log(counter)
-    // }
-
-
-    // const handleOnChange = (e) => {
-    //     const abc = {};
-    //     abc[e.target.className] = e.target.value;
-    //     setInputValues({ ...inputValues, ...abc });
-    // };
-
-
     return (
         <>
-            {/* <div className="formButtonContainer">
-                <div className="formHeaders">Work Experience</div>
-                <button className="addJobButton">+</button>
-            </div> */}
+
             {WorkExperienceFormData.map((x, i) => {
 
                 return (
@@ -37,18 +18,11 @@ function WorkExperienceForm( { WorkExperienceFormData, handleChangeExperience, h
                             value={x.jobTitle} 
                             type="text" 
                             onChange={e => handleChangeExperience(e, i)}
-                            // onChange={handleChangeExperience} 
                             placeholder="Position, Company"
                             name="jobTitle"
                             
                         />
-                        {/* <input 
-                            value={WorkExperienceFormData.company} 
-                            type="text" 
-                            onChange={handleChangeExperience} 
-                            placeholder="Company"
-                            name="company"
-                        /> */}
+
                         <input 
                             value={x.date} 
                             type="text" 
@@ -59,7 +33,7 @@ function WorkExperienceForm( { WorkExperienceFormData, handleChangeExperience, h
                         
 
 
-                        {x.task.map((x, i) => {
+                        {WorkExperienceFormData.map((x, i) => {
                         
                             return (
                                 <input 
