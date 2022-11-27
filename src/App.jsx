@@ -43,6 +43,13 @@ function App() {
       list[i][name] = value;
       setWorkExperienceFormData(list);
     };
+    
+    const handleChangeTask = (e, i) => {
+      const { name, value } = e.target;
+      const list = [...WorkExperienceFormData];
+      list[i][name] = value;
+      setWorkExperienceFormData([...WorkExperienceFormData, {list}]);
+    };
 
     const handleRemoveClick = (index) => {
       const list = [...WorkExperienceFormData];
@@ -64,18 +71,13 @@ function App() {
     //   }),
     // );
 
-    // const handleAddTask = (index) => {
-    //   let workExperienceTarget = WorkExperienceFormData[index].task
-    //   setWorkExperienceFormData([...task, {task: ""}]);
-    // };
-
     const handleAddTask = (id) => {
       setWorkExperienceFormData (
         WorkExperienceFormData.map((item) => {
           if (item.id === id) {
               return { ...item, task: [...item.task, { task: ""}] };
           } else {
-          return item;        
+          return {...item};        
           };
         }),
       )
@@ -104,7 +106,7 @@ function App() {
         <div className='form'>
           <PersonalDetailsForm PersonalDetailsFormData={PersonalDetailsFormData} handleChange={handleChange}/>
           <WorkExperienceForm WorkExperienceFormData={WorkExperienceFormData} handleChangeExperience={handleChangeExperience}
-          handleAddClick={handleAddClick} handleRemoveClick={handleRemoveClick} handleAddTask={handleAddTask}/>
+          handleAddClick={handleAddClick} handleRemoveClick={handleRemoveClick} handleAddTask={handleAddTask} handleChangeTask={handleChangeTask}/>
           <EducationForm EducationFormData={EducationFormData} handleChangeEducation={handleChangeEducation}/>
 
         </div>

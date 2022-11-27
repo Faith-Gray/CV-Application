@@ -1,11 +1,11 @@
 
-function WorkExperienceForm( { WorkExperienceFormData, handleChangeExperience, handleAddClick, handleRemoveClick, handleAddTask } ) {
+function WorkExperienceForm( { WorkExperienceFormData, handleChangeExperience, handleAddClick, handleRemoveClick, handleAddTask, handleChangeTask } ) {
 
     return (
         <>
 
             {WorkExperienceFormData.map((x, i) => {
-
+                console.log(x.task);
                 return (
                     
                     <form>
@@ -33,13 +33,13 @@ function WorkExperienceForm( { WorkExperienceFormData, handleChangeExperience, h
                         
 
 
-                        {WorkExperienceFormData.map((x, i) => {
+                        {x.task.map((y, index) => {
                         
                             return (
                                 <input 
-                                value={x.task} 
+                                value={[y]} 
                                 type="text" 
-                                onChange={e => handleChangeExperience(e, i)} 
+                                onChange={e => handleChangeTask(e, index)} 
                                 placeholder="Task"
                                 name="task"
                             />
