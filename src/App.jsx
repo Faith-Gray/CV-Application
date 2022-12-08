@@ -25,7 +25,7 @@ function App() {
     // I think I need to make the form's use state an array to loop through
 
     const [ WorkExperienceFormData, setWorkExperienceFormData ] = useState(
-      [{jobTitle: "", date: "", task: [""], id: uuidv1()}]
+      [{jobTitle: "", date: "", task: "", id: uuidv1()}]
     );
 
     // function handleChangeExperience(e) {
@@ -44,12 +44,12 @@ function App() {
       setWorkExperienceFormData(list);
     };
     
-    const handleChangeTask = (e, i) => {
-      const { name, value } = e.target;
-      const list = [...WorkExperienceFormData];
-      list[i][name] = value;
-      setWorkExperienceFormData([...WorkExperienceFormData, {list}]);
-    };
+    // const handleChangeTask = (e, i) => {
+    //   const { name, value } = e.target;
+    //   const list = [...WorkExperienceFormData];
+    //   list[i][name] = value;
+    //   setWorkExperienceFormData([...WorkExperienceFormData, {list}]);
+    // };
 
     const handleRemoveClick = (index) => {
       const list = [...WorkExperienceFormData];
@@ -59,7 +59,7 @@ function App() {
     };
 
     const handleAddClick = () => {
-      setWorkExperienceFormData([...WorkExperienceFormData, { jobTitle: "", date: "", task: [""], id: uuidv1()}]);
+      setWorkExperienceFormData([...WorkExperienceFormData, { jobTitle: "", date: "", task: "", id: uuidv1()}]);
     };
 
     // setState(
@@ -106,7 +106,7 @@ function App() {
         <div className='form'>
           <PersonalDetailsForm PersonalDetailsFormData={PersonalDetailsFormData} handleChange={handleChange}/>
           <WorkExperienceForm WorkExperienceFormData={WorkExperienceFormData} handleChangeExperience={handleChangeExperience}
-          handleAddClick={handleAddClick} handleRemoveClick={handleRemoveClick} handleAddTask={handleAddTask} handleChangeTask={handleChangeTask}/>
+          handleAddClick={handleAddClick} handleRemoveClick={handleRemoveClick} handleAddTask={handleAddTask}/>
           <EducationForm EducationFormData={EducationFormData} handleChangeEducation={handleChangeEducation}/>
 
         </div>
