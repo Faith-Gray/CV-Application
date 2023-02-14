@@ -25,7 +25,7 @@ function App() {
     // I think I need to make the form's use state an array to loop through
 
     const [ WorkExperienceFormData, setWorkExperienceFormData ] = useState(
-      [{jobTitle: "", date: "", task: "", id: uuidv1()}]
+      [{jobTitle: "", date: "", task: "", task2: "", task3: "", id: uuidv1()}]
     );
 
     // function handleChangeExperience(e) {
@@ -59,7 +59,7 @@ function App() {
     };
 
     const handleAddClick = () => {
-      setWorkExperienceFormData([...WorkExperienceFormData, { jobTitle: "", date: "", task: "", id: uuidv1()}]);
+      setWorkExperienceFormData([...WorkExperienceFormData, { jobTitle: "", date: "", task: "", task2: "", task3: "", id: uuidv1()}]);
     };
 
     // setState(
@@ -133,6 +133,8 @@ function App() {
                           <ul className='workTasksList'>
                             {/* {WorkExperienceFormData.map(( x, i) => { */}
                           <li className='workTask'>{WorkExperienceFormData[i].task || "Prepared software engineering tasks with software engineering things."}</li>
+                          <li className='workTask'>{WorkExperienceFormData[i].task2 || "Prepared software engineering tasks with software engineering things."}</li>
+                          <li className='workTask'>{WorkExperienceFormData[i].task3 || "Prepared software engineering tasks with software engineering things."}</li>
                           </ul>
                         </div>
                       {console.log(x)}                      
