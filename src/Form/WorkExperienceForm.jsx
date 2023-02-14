@@ -30,21 +30,7 @@ function WorkExperienceForm( { WorkExperienceFormData, handleChangeExperience, h
                             placeholder="Date(s)"
                             name="date"
                         />
-                        
 
-
-                        {/* {x.task.map((y, index) => {
-                        
-                            return (
-                                <input 
-                                value={[y]} 
-                                type="text" 
-                                onChange={e => handleChangeTask(e, index)} 
-                                placeholder="Task"
-                                name="task"
-                            />
-                            )
-                        })} */}
                                  
                         <input 
                             value={x.task} 
@@ -70,41 +56,6 @@ function WorkExperienceForm( { WorkExperienceFormData, handleChangeExperience, h
                             name="task3"
                         />                                              
                         
-                        {/* {WorkExperienceFormData.map((x, i) => {
-                            return(
-                                <input 
-                                    value={x.task} 
-                                    type="text" 
-                                    onChange={e => handleChangeExperience(e, i)} 
-                                    placeholder="Task"
-                                    name="task"
-                                />
-                                
-                            )
-                        })} */}
-
-                        {/* To add later: Code to add multiple tasks */}
-                        {/* {Array.from(Array(counter)).map((c, index) => {
-                            return (
-                                <input
-                                onChange={handleOnChange}
-                                key={c}
-                                className={index}
-                                type="text"
-                                >
-                                </input>
-                            )
-                        })} */}
-                        
-                        
-                        {/* <input 
-                            className="addTaskButton"
-                            value="Add Task" 
-                            type="button" 
-                            onClick={handleAddTask}
-                            name="addTaskButton"
-                            
-                        />                 */}
                     </form>
                 );
             })}

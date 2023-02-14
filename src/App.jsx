@@ -11,7 +11,6 @@ function App() {
         {resumeName: "", resumeTitle: "", phoneNumber: "", email: "", location: ""}
     );
 
-    // console.log(PersonalDetailsFormData);
         
     function handleChange(e) {
         setPersonalDetailsFormData(prevPersonalDetailsFormData => {
@@ -22,20 +21,12 @@ function App() {
         })
     };
 
-    // I think I need to make the form's use state an array to loop through
 
     const [ WorkExperienceFormData, setWorkExperienceFormData ] = useState(
       [{jobTitle: "", date: "", task: "", task2: "", task3: "", id: uuidv1()}]
     );
 
-    // function handleChangeExperience(e) {
-    //   setWorkExperienceFormData(prevWorkExperienceFormData => {
-    //       return {
-    //           ...prevWorkExperienceFormData,
-    //           [e.target.name]: e.target.value
-    //       }
-    //   })
-    // };
+
 
     const handleChangeExperience = (e, i) => {
       const { name, value } = e.target;
@@ -43,13 +34,6 @@ function App() {
       list[i][name] = value;
       setWorkExperienceFormData(list);
     };
-    
-    // const handleChangeTask = (e, i) => {
-    //   const { name, value } = e.target;
-    //   const list = [...WorkExperienceFormData];
-    //   list[i][name] = value;
-    //   setWorkExperienceFormData([...WorkExperienceFormData, {list}]);
-    // };
 
     const handleRemoveClick = (index) => {
       const list = [...WorkExperienceFormData];
@@ -62,14 +46,7 @@ function App() {
       setWorkExperienceFormData([...WorkExperienceFormData, { jobTitle: "", date: "", task: "", task2: "", task3: "", id: uuidv1()}]);
     };
 
-    // setState(
-    //   state.map((item) => {
-    //       if (item.id === id) {
-    //           return { ...item, tasks: [...item.tasks, newTask] };
-    //       }
-    //       return item;
-    //   }),
-    // );
+
 
     const handleAddTask = (id) => {
       setWorkExperienceFormData (
@@ -159,17 +136,3 @@ function App() {
 }
 
 export default App;
-
-
-//components
-//Header - Name, job title? phone, email, location
-
-//Work Experience - Job Component - be able to add and delete these
-//job title, company, dates, bullet points
-
-//Education - School, Dates - be able to add and delete
-
-//things to add
-//react-split - library to split the screen easily
-//nanoid for id numbers
-//find a library that might let me print out the resume part of the screen
