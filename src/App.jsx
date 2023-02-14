@@ -131,27 +131,16 @@ function App() {
                           <div className='workTitle'>{WorkExperienceFormData[i].jobTitle|| "Software Engineer, Google"}</div>
                           <div className='workDates'>{WorkExperienceFormData[i].date || "September 2018 - October 2020"}</div>
                           <ul className='workTasksList'>
-                            {/* {WorkExperienceFormData.map(( x, i) => { */}
-                          <li className='workTask'>{WorkExperienceFormData[i].task || "Prepared software engineering tasks with software engineering things."}</li>
-                          <li className='workTask'>{WorkExperienceFormData[i].task2 || "Prepared software engineering tasks with software engineering things."}</li>
-                          <li className='workTask'>{WorkExperienceFormData[i].task3 || "Prepared software engineering tasks with software engineering things."}</li>
+                          <li className='workTask'>{WorkExperienceFormData[i].task || "Built a full-stack web app to allow users to simulate and visualize large sets of data."}</li>
+                          <li className='workTask'>{WorkExperienceFormData[i].task2 || "Built RESTful APIs that served data to the JavaScript front-end based on dynamically chosen user inputs,"}</li>
+                          <li className='workTask'>{WorkExperienceFormData[i].task3 || "Tested software for bugs and operating speed, fixing bugs and documenting processing to increase efficiency by 18%."}</li>
                           </ul>
                         </div>
-                      {console.log(x)}                      
                     </>
                 );
               })}
           </div>
-          {/* <div className='workExperienceSection'>
-            <div className='resumeTitle'>WORK EXPERIENCE</div>
-            <div className='jobGridContainer'>
-              <div className='workTitle'>{WorkExperienceFormData.jobTitle|| "Software Engineer, Google"}</div>
-              <div className='workDates'>{WorkExperienceFormData.date || "September 2018 - October 2020"}</div>
-              <ul className='workTasksList'>
-              <li className='workTask'>{WorkExperienceFormData.task || "Prepared software engineering tasks with software engineering things."}</li>
-              </ul>
-            </div>
-          </div> */}
+
           <div className='educationSection'>
             <div className='resumeTitle'>EDUCATION</div>
             <div className='educationGridContainer'>

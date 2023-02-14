@@ -178,8 +178,8 @@ input[type=text] {
     font-size: 14px;
     list-style-type: none;
     width: 100%;
-    list-style-position: inside;
-    padding-left: 1px;
+    list-style-position: outside;
+    padding-left: 15px;
     padding-top: 3px;
 }
 
