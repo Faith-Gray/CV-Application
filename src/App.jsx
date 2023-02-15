@@ -35,11 +35,9 @@ function App() {
       setWorkExperienceFormData(list);
     };
 
-    const handleRemoveClick = (index) => {
-      const list = [...WorkExperienceFormData];
-      list.splice(index, 1);
+    const handleRemoveClick = (id) => {
+      const list = WorkExperienceFormData.filter((item) => item.id !== id);
       setWorkExperienceFormData(list);
-      console.log(index);
     };
 
     const handleAddClick = () => {
@@ -103,6 +101,7 @@ function App() {
             <div className='resumeTitle'>WORK EXPERIENCE</div>
             {WorkExperienceFormData.map(( x, i) => {
                 return (
+                    // <li key={WorkExperienceFormData.id}>
                     <>
                         <div className='jobGridContainer'>
                           <div className='workTitle'>{WorkExperienceFormData[i].jobTitle|| "Software Engineer, Google"}</div>
@@ -114,6 +113,7 @@ function App() {
                           </ul>
                         </div>
                     </>
+                    // </li>
                 );
               })}
           </div>

@@ -11,7 +11,7 @@ function WorkExperienceForm( { WorkExperienceFormData, handleChangeExperience, h
                     <form>
                         <div className="formButtonContainer">
                             <div className="formHeaders">Work Experience</div>
-                            {WorkExperienceFormData.length !== 1 && <button className="subJobButton" type="button" onClick={handleRemoveClick}>-</button>}
+                            {WorkExperienceFormData.length !== 1 && <button className="subJobButton" type="button" onClick={() => handleRemoveClick(x.id)}>-</button>}
                             {WorkExperienceFormData.length - 1 === i && <button className="addJobButton" type="button" onClick={handleAddClick}>+</button>}
                         </div>                        
                         <input 
