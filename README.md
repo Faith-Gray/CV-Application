@@ -1,11 +1,1 @@
-A React app which allows users to create their own resume using a ready template and download it in a PDF format.
-
-
-Getting started
-
-git clone https://github.com/Faith-Gray/CV-Application.git
-cd cv-application
-npm install
-npm start
-
-Built with React
+![image](https://user-images.githubusercontent.com/89816245/218928802-d2737181-3111-465a-a2b2-3fa2a246fed8.png)
